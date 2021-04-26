@@ -25,11 +25,12 @@ function useAnimals() {
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
   useEffect(() => {
-    client.getEntries()
-    //if the server replies
-    //response is a variable, depends on map function
+    client
+      .getEntries()
+      //if the server replies
+      //response is a variable, depends on map function
       .then((response) => {
-        console.log(response);
+        console.log(JSON.stringify(response));
         const newAnimals = response.items.map((item) => getAnimal(item));
         setAnimals(newAnimals); //-> actions after answer, asynchronous callback
       })
