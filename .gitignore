@@ -7,7 +7,7 @@
 
 #api-credentials
 .env
-
+package-lock.json
 
 # testing
 /coverage
