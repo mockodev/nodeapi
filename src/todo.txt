@@ -1,1 +1,3 @@
-j8XA2QTiMztADeX6VTz_qL3reXQvGq-Q4NHQbAv6ESs
+use the exact same api from contentful, or can it be flattend ?
+
+package.lock.json => add to .gitignore ? how to fix it ?
