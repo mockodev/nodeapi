@@ -1,21 +1,4 @@
 import { useEffect, useState } from "react";
-import { client } from "../client";
-import axios from "axios";
-
-//getting information from contentful
-//we use get Animal to retrieve a new simplified object and save it  line 7-17: object
-const getAnimal = (animal) => ({
-  id: animal.sys.id,
-  name: animal.fields.name,
-  latinName: animal.fields.latinName,
-  thumbnails: animal.fields.thumbnails?.map((thumb) => ({
-    url: thumb.fields.file.url,
-    title: thumb.fields.title,
-  })),
-  //crop: animal.fields?.fields.file.url + "?w=300&h=200&fit=crop",
-  img: animal.fields.image?.fields.file.url + "?w=400&h=300&fit=fill",
-});
-
 
 //hook created to include list of animals from API
 function useAnimals() {
@@ -43,12 +26,11 @@ function useAnimals() {
   // }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/items")
+    fetch("http://localhost:5000/animals")
       .then((response) => response.json())
       .then((json) => {
         
-        setAnimals(json);
-        console.log(json);
+        setAnimals(json.data);
       })
       .catch(() => console.log("Request failed"));
   }, []);

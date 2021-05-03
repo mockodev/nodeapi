@@ -1,3 +1,21 @@
-use the exact same api from contentful, or can it be flattend ?
+!!!!! add Video links to mongoimport, adjust filename 
 
-package.lock.json => add to .gitignore ? how to fix it ?
+
+
+implement upload functionality
+
+deploy to Heroku or netlify
+
+user@NHTTPR# mongoimport /dataset/products.json -h localhost:27000 -u m103-application-user -p “m103-application-pass” --authenticationDatabase admin --db applicationData --drop --collection products
+
+mongoimport ./books.json  -h URL -u rootuser -p "rootpass" --authenticationDatabase admin -d bookdb -c books --drop 
+
+mongoimport ./mongoimport.json   -u rootuser -p "rootpass" --authenticationDatabase admin -d animaldb -c animal --drop 
+
+ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+
+      mongoimport ./mongoimport.json -h https://cloud.mongodb.com:27017  -u m001-student -p "m001-mongodb-basics" --authenticationDatabase admin -d animaldb -c animal --drop
+
+      mongoimport ./import.json -h https://cloud.mongodb.com:27017  -u m001-student -p "m001-mongodb-basics" --authenticationDatabase admin -d animaldb -c animal --drop
