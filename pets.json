@@ -1,0 +1,15 @@
+{
+    "_id": 1,
+    "name": "Wag",
+    "type": "Dog"
+}
+{
+    "_id": 2,
+    "name": "Bark",
+    "type": "Dog"
+}
+{
+    "_id": 3,
+    "name": "Meow",
+    "type": "Cat"
+}
